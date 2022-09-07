@@ -1,0 +1,327 @@
+@font-face {
+    font-family: gilroy-regular;
+    src: url(/assets/css/Gilroy-Regular.woff);
+}
+
+@font-face {
+    font-family: gilroy-bold;
+    src: url(/assets/css/Gilroy-Bold.woff);
+}
+
+@font-face {
+    font-family: gilroy-semibold;
+    src: url(/assets/css/Gilroy-SemiBold.woff);
+}
+
+.terrain {
+
+    width: 100vw;
+    height: 100%;
+    background-color: #010118;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+
+}
+
+.mainwrapper {
+
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E1E1E;
+    overflow: hidden;
+
+
+}
+
+.root {
+
+    display: flex;
+    min-width: 50vw;
+    /*max-width: 70vw;*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: transparent;
+    z-index: 10;
+
+
+}
+
+.root .heading {
+
+    font-size: 106px;
+    color: white;
+    font-family: gilroy-bold;
+    line-height: 125px;
+    letter-spacing: -3px;
+    white-space: pre-line;
+    text-align: center;
+    width: 100%;
+
+}
+
+
+
+.vwrapper {
+
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+    cursor: move;
+
+
+}
+
+.root .activespeaker img {
+
+    border: 2px solid lightblue;
+
+}
+
+
+.vwrapper .video {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: black;
+    background-image: url(https://picsum.photos/200);
+    object-fit: cover;
+
+}
+
+.controls {
+
+
+    color: yellow;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    background-color: rgba(10, 10, 10, 0.5);
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    visibility: hidden;
+
+}
+
+.controls .control {
+
+    margin: 10px;
+    cursor: pointer;
+}
+
+.controls .name {
+
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+
+}
+
+.controls .control img {
+
+    width: 30px;
+}
+
+.vwrapper:hover>.controls {
+    color: white;
+    visibility: visible;
+}
+
+
+.root .connect {
+
+    color: white;
+    padding: 10px;
+    background-color: #b91c1c;
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 15px;
+    background-image: url(/assets/img/sea.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.root .golive {
+
+
+    color: white;
+    padding: 5px;
+    background-color: #b91c1c;
+    min-width: 100px;
+    min-height: 30px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+
+}
+
+.root .joining {
+
+    background-color: darkgoldenrod !important;
+}
+
+.root .connect:hover {
+
+    filter: saturate(200%);
+
+}
+
+
+.mainwrapper .topbanner {
+
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+
+}
+
+.mainwrapper .topbanner .logo {
+
+    width: 60px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.mainwrapper .topbanner .logolink {
+
+    display: block;
+}
+
+.mainwrapper .topbanner .bgcontrol {
+
+
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: white;
+    display: flex;
+    opacity: 0.4;
+
+
+}
+
+.mainwrapper .topbanner .bgcontrol:hover {
+
+    opacity: 1;
+
+}
+
+.mainwrapper .topbanner .bgcontrol .color {
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    display: block;
+    margin: 6px;
+    cursor: pointer;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+
+
+}
+
+.mainwrapper .topbanner .bgcontrol .color0 {
+
+    background-color: black;
+
+}
+
+.mainwrapper .topbanner .bgcontrol .color1 {
+
+    background-color: green;
+}
+
+.mainwrapper .topbanner .bgcontrol .color2 {
+
+    background-color: blue;
+}
+
+.mainwrapper .topbanner .bgcontrol .color3 {
+
+    background-color: #7B0606;
+}
+
+.mainwrapper .topbanner .bgcontrol .color4 {
+
+    background-color: grey;
+}
+
+
+@media screen and (max-width: 480px) {
+    .vwrapper {
+        width: 130px;
+        height: 130px;
+
+    }
+
+    .mainwrapper .topbanner .logo {
+
+        width: 40px;
+        left: 40px;
+        top: 40px;
+    }
+
+    .mainwrapper .topbanner .bgcontrol {
+
+        top: 40px;
+        right: 30px;
+    }
+
+    .root .heading {
+
+        font-size: 60px;
+        line-height: 65px;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .root .heading {
+
+        font-size: 60px;
+        line-height: 65px;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    .root {
+
+        max-width: 90vw;
+    }
+
+
+
+}
